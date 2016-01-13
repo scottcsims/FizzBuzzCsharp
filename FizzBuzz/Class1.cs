@@ -16,15 +16,15 @@ namespace FizzBuzzDemo
             {
                 if (CheckMultipleOfFiveAndThree(x))
                 {
-                    Debug.WriteLine(x + "FizzBuzz");
+                    Debug.WriteLine(x + " FizzBuzz");
                 }
                 else if (CheckMultipleOfThree(x))
                 {
-                    Debug.WriteLine(x + "Fiz");
+                    Debug.WriteLine(x + " Fizz");
                 }
                 else if (CheckMultipleOfFive(x))
                 {
-                    Debug.WriteLine(x + "Buzz");
+                    Debug.WriteLine(x + " Buzz");
                 }
                 else
                 {
@@ -45,7 +45,7 @@ namespace FizzBuzzDemo
 
         public bool CheckMultipleOfFiveAndThree(int checkFiveAndThree)
         {
-            return ((checkFiveAndThree%5) == 0) && ((checkFiveAndThree%3) == 0);
+            return (CheckMultipleOfThree(checkFiveAndThree) && CheckMultipleOfFive(checkFiveAndThree));
         }
     }
 }
